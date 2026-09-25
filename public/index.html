@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'" />
+    <h1>PDF Analyzer</h1>
+    <p class="subtitle">Upload a PDF file and click Analyze.</p>
+
+    <form id="upload-form">
+      <label for="pdf-input" class="file-label">
+        <span id="file-name">Choose a PDF file...</span>
+      </label>
+      <input type="file" id="pdf-input" name="pdf" accept="application/pdf" required />
+
+      <button type="submit" id="analyseer-btn">Analyze</button>
+    </form>
+
+    <div id="status" class="status" hidden></div>
+
+    <div id="result" class="result" hidden>
+      <h2>Summary</h2>
+      <p id="summary-text"></p>
+
+      <h2>Search focus</h2>
+      <div id="focus-points" class="focus-points"></div>
+
+      <h2>Similar startups &amp; scale-ups</h2>
+      <div id="company-cards" class="company-cards"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
